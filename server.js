@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const app = express();
 
@@ -12,9 +14,9 @@ const StudentRoutes = require('./Routes/StudentRoutes')
 
 app.use('/', StudentRoutes)
 
+const PORT = process.env.PORT
 
-
-app.listen( 5000 , () =>{
+app.listen( PORT , () =>{
     console. log('server run at 5000')
 })
 
